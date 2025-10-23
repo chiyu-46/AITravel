@@ -99,6 +99,7 @@ public class WhisperSpeechToText : MonoBehaviour
         // formData.Add(new MultipartFormFileSection("file", audioData, "audio.wav", "multipart/form-data"));
 
         // 请求头
+        //TODO: 请在此处替换自己的密钥文本。
         var headers = new Dictionary<string, string>
         {
             { "Content-Type", "application/json; charset=utf-8" },
@@ -106,7 +107,7 @@ public class WhisperSpeechToText : MonoBehaviour
             { "X-TC-Region", "ap-shanghai" },
             { "X-TC-Action", "SentenceRecognition" },
             { "X-TC-Timestamp", (DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds.ToString(CultureInfo.InvariantCulture) },
-            { "Authorization", "TC3-HMAC-SHA256 Credential=AKIDub3E8m9F5exzoOjslPmtslPpzuZzA7pH/2020-09-03/asr/tc3_request, SignedHeaders=content-type;host, Signature=aa5e2b8b16ced1ac9f877c9a92dab641dcd940837f5869a9e933688c181094de" }
+            { "Authorization", "请在此处替换自己的密钥文本。" }
         };
 
         // 请求体
